@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.5.0
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -16,6 +19,7 @@ jobs:
       - run: pnpm test
 
   publish-gpr:
+    
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -23,6 +27,9 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 8.5.0
       - uses: actions/setup-node@v3
         with:
           node-version: 16
