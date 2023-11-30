@@ -25,6 +25,7 @@
     "postinstall": "tsup"
   },
   "author": "zoubingwu<zoubingwu@gmail.com>",
+  "packageManager": "pnpm@8.5.0",
   "license": "MIT",
   "dependencies": {
     "@apidevtools/swagger-parser": "^10.1.0",
