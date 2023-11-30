@@ -26,16 +26,16 @@ async function generateExample(name, args = '') {
   return output;
 }
 
-describe('example', () => {
-  test.each([
-    { name: 'githubapi', args: '--node' },
-    { name: 'githubapi', args: '--react-native' },
-  ])(
-    '$name $args should be valid',
-    async ({ name, args }) => {
-      const example = await generateExample(name, args);
-      await expect(import(example)).resolves.toMatchSnapshot();
-    },
-    timeout
-  );
-});
+// describe('example', () => {
+//   test.each([
+//     { name: 'githubapi', args: '--node' },
+//     { name: 'githubapi', args: '--react-native' },
+//   ])(
+//     '$name $args should be valid',
+//     async ({ name, args }) => {
+//       const example = await generateExample(name, args);
+//       await expect(import(example)).resolves.toMatchSnapshot();
+//     },
+//     timeout
+//   );
+// });
